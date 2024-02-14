@@ -1,0 +1,32 @@
+const keys = {};
+
+['a', 'A', 'α', 'Α'].forEach(key => keys[key] = ['er1', 'el1']);
+['b', 'B', 'β', 'Β'].forEach(key => keys[key] = ['er2', 'el2']);
+['g', 'G', 'γ', 'Γ'].forEach(key => keys[key] = ['er3', 'el3']);
+['d', 'D', 'δ', 'Δ'].forEach(key => keys[key] = ['er4', 'el4']);
+['e', 'E', 'ε', 'Ε'].forEach(key => keys[key] = ['er5', 'el5']);
+['z', 'Z', 'ζ', 'Ζ'].forEach(key => keys[key] = ['er6', 'el6']);
+['h', 'H', 'η', 'Η', 'i', 'I', 'ι', 'Ι', 'υ', 'Υ', 'y', 'Y'].forEach(key => keys[key] = ['er7', 'el7']);
+['u', 'U', 'θ', 'Θ'].forEach(key => keys[key] = ['er8', 'el8']);
+['k', 'K', 'κ', 'Κ'].forEach(key => keys[key] = ['er9', 'el9']);
+['l', 'L', 'λ', 'Λ'].forEach(key => keys[key] = ['er10', 'el10']);
+['m', 'M', 'μ', 'Μ'].forEach(key => keys[key] = ['er11', 'el11']);
+['n', 'N', 'ν', 'Ν'].forEach(key => keys[key] = ['er12', 'el12']);
+['j', 'J', 'ξ', 'Ξ'].forEach(key => keys[key] = ['er13', 'el13']);
+['o', 'O', 'ο', 'Ο', 'ω', 'Ω'].forEach(key => keys[key] = ['er14', 'el14']);
+['p', 'P', 'π', 'Π'].forEach(key => keys[key] = ['er15', 'el15']);
+['r', 'R', 'ρ', 'Ρ'].forEach(key => keys[key] = ['er16', 'el16']);
+['s', 'S', 'σ', 'Σ', 'ς'].forEach(key => keys[key] = ['er17', 'el17']);
+['t', 'T', 'τ', 'Τ'].forEach(key => keys[key] = ['er18', 'el18']);
+['f', 'F', 'φ', 'Φ'].forEach(key => keys[key] = ['er19', 'el19']);
+['x', 'X', 'χ', 'Χ'].forEach(key => keys[key] = ['er20', 'el20']);
+['ψ', 'Ψ'].forEach(key => keys[key] = ['er21', 'el21']);
+keys['.'] = 'er22';
+keys['!'] = 'el22';
+keys[','] = 'er23';
+keys['?'] = 'el23';
+keys['@'] = 'er24';
+keys[';'] = 'el24';
+
+const enggreek = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZαβγδεζηθικλμνξοπρσςτυφχψωΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ";
+const special = ".,!?@;";
