@@ -1,9 +1,202 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: darkslategray;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    gap: min(5rem, 10vw);
+}
+
 button {
-    background-color: #4CAF50;
+    font-size: large;
+    font-family: "Sofia Sans Semi Condensed", sans-serif;
+
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
+    
     cursor: pointer;
-    width: 100%;
+    
+    border: 2px solid;
+    border-radius: 100px;
+    
+    transition: opacity 0.5s;
+
+    min-width: 10rem;
+    min-height: 3rem;
+
+    position: relative;
+
+    background-color:darkslategray;
+    box-shadow: 0 0 0 3px white;
+}
+
+button:hover {
+    opacity: 0.75;
+}
+
+#soundboard:hover .gg-music-speaker {
+    scale: 2.5;
+    rotate: 15deg;
+}
+
+#valentine:hover #level1 {
+    opacity: 1;
+}
+
+#valentine:hover #level2 {
+    opacity: 1;
+}
+
+#valentine:hover #level3 {
+    right:  1.5rem;
+    rotate: 15deg;
+}
+
+#valentine:hover #level3::before, #valentine:hover #level3::after {
+    scale: 110%;
+}
+
+.gg-music-speaker {
+    background-color: white;
+    box-sizing: border-box;
+    position: absolute;
+    display: block;
+    transform: scale(var(--ggs, 1));
+    width: 16px;
+    height: 22px;
+    border: 2px solid darkslategray;
+    border-radius: 3px;
+
+    bottom: 0%;
+    right: -0.5rem;
+
+    box-shadow: 0 0 0 3px white;
+
+    scale: 1.5;
+
+    transition: scale 0.5s, rotate 0.5s;
+}
+
+.gg-music-speaker::after,
+.gg-music-speaker::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border: 2px solid darkslategray;
+    border-radius: 100px
+}
+
+.gg-music-speaker::before {
+    bottom: 2px;
+    width: 8px;
+    height: 8px;
+    left: 2px
+}
+
+.gg-music-speaker::after {
+    width: 4px;
+    height: 4px;
+    left: 4px;
+    top: 2px
+}
+
+.heart:before,
+.heart:after{
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: white;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+            
+    transition: scale 0.5s;
+}
+.heart:after{
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+
+.container {
+    position: absolute;
+    bottom: 100%;
+}
+
+.heart {
+    scale: 50%;
+
+    position: absolute;
+    bottom: 70%;
+    right: 15%;
+
+    transition: right 0.7s, rotate 0.2s;
+}
+
+#level1 {
+    pointer-events: none;
+
+    opacity: 0;
+
+    transition: opacity 0.1s ease-in-out;
+
+    bottom: 7rem;
+    right: 1.5rem;
+    rotate: 25deg;
+}
+
+#level2 {
+    pointer-events: none;
+
+    opacity: 0;
+
+    transition: opacity 0.2s ease-in-out;
+
+    bottom: 5rem;
+    right:  0.5rem;
+    rotate: -5deg;
+}
+
+#level1::before,
+#level1::after {
+    scale: 0.5;
+}
+
+#level2::before,
+#level2::after {
+    scale: 0.75;
+
+}
+
+#level3::before,
+#level3::after {
+    scale: 1;
+
 }
